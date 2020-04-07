@@ -25,6 +25,11 @@ nunjucks.configure("views", {
     express:server
 })
 
-//Configurando o express para renderizar o css
+//5-Configurando o express para renderizar o css
 //abaixo dizemos para o express ler arquivos statics e que eles estão na pasta public
 server.use(express.static('public'))   
+
+//-6 Configurando rota da página classes(portifólio)
+server.get("/portifolio", function(rec, res) { 
+    return res.render("portifolio") //chamando a antiga pagina index
+})
