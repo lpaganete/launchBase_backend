@@ -27,4 +27,4 @@ nunjucks.configure("views", {
 
 //Configurando o express para renderizar o css
 //abaixo dizemos para o express ler arquivos statics e que eles estão na pasta public
-server.use(express.static('public'))  
+server.use(express.static('public'))   
