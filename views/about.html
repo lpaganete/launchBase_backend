@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html>
+{%  extends "layout.html" %} <!-- extendendo os arquivos da página layout. Ele irá juntar o que tem na página layout com o conteúdo do block content-->
 
-<head>
-    <title>Mayk Brito</title>
-    <link rel="stylesheet" href="/styles.css">
-
-</head>
-
-<body>
-    <header>
-        <div class="links">
-            <!--A camada div está por cima da camada header-->
-            <a href="/">Sobre</a>
-            <a href="/portifolio">Aulas</a>
-        </div>
-    </header>
+    {% block content%} <!--Tudo que estiver dentro destas tags irá para a página layout-->
 
     <div id="wrapper">
         <img src="https://avatars2.githubusercontent.com/u/6643122?s=460&u=1e9e1f04b76fb5374e6a041f5e41dce83f3b5d92&v=4"
@@ -32,6 +18,4 @@
         <a href="https://www.linkedin.com/in/maykbrito/" target="_blank">Linkedin</a>
     </div>
 
-</body>
-
-</html>
+    {% endblock %}

@@ -10,10 +10,10 @@ server.listen(5001, function() {
 
 
  //2-Configurando a rota da pagina index (about)
- server.get("/", function(rec, res) { 
-    return res.render("index") //chamando a antiga pagina index
+ server.get("/", function(rec, res) {  //o / chama a pagina inicial
+    return res.render("about") //chamando a antiga pagina index
 })
-
+ 
 
 //3- instalar dependencia nodemon que reinicia o servidor a cada alteração 
 //4-Instalar dependencia nunkuks que é um template engine. Um motor que trabalha com templates.
