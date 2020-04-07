@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html>
+{%  extends "layout.html" %} <!-- extendendo os arquivos da página layout. Ele irá juntar o que tem na página layout com o conteúdo do block content-->
 
-<head>
-    <title>Mayk Brito</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"> <!--Importando icones do material icons guide-->
-    <link rel="stylesheet" href="/styles.css">
-</head>
-
-<body>
-    <header>
-        <div class="links">
-            <!--A camada div está por cima da camada header-->
-            <a href="/about">Sobre</a>
-            <a href="/portifolio">Aulas</a>
-        </div>
-    </header>
+    {% block content %} <!--Tudo que estiver dentro destas tags irá para a página layout-->
 
     <div id="wrapper">
         <h1>Aulas </h1>
@@ -118,6 +103,4 @@
 
     <script src="scripts.js"></script> <!--Chama meu arquivo scripts.js  -->
 
-</body>
-
-</html> 
+    {% endblock %}
