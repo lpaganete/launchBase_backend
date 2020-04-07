@@ -20,8 +20,11 @@ server.listen(5001, function() {
 //temos que chamar o nunjuks no inicio do server.js
 
 server.set("view engine", "html") //qual tipo de arquivo que ele vai ler
-
+ 
 nunjucks.configure("views", {
     express:server
 })
 
+//Configurando o express para renderizar o css
+//abaixo dizemos para o express ler arquivos statics e que eles estão na pasta public
+server.use(express.static('public'))  
