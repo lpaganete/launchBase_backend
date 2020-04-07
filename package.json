@@ -5,11 +5,8 @@
   "scripts": {
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lpaganete/launchBase_backend.git"
-  },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
   }
 }
