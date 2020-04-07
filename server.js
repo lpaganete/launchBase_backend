@@ -2,6 +2,11 @@ const express = require('express')
 
 const server = express()
 
+//1-setando a porta que o servidor vai rodar e exibindo mensagem caso o ele execute
+server.listen(5001, function() {
+    console.log("Server is running!")
+})
+
 
  //2-Configurando a rota da pagina index (about)
  server.get("/", function(rec, res) { 
@@ -9,8 +14,7 @@ const server = express()
 })
 
 
+//3- instalar dependencia nodemon que reinicia o servidor a cada alteração 
 
-//1-setando a porta que o servidor vai rodar e exibindo mensagem caso o ele execute
-server.listen(5001, function() {
-    console.log("Server is running!")
-})git shortlog
+
+//4-Instalar dependencia nunkuks que é um template engeene render
