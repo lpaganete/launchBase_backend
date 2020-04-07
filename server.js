@@ -1,4 +1,5 @@
 const express = require('express')
+const nunjucks = require('nunjucks')
 
 const server = express()
 
@@ -15,6 +16,12 @@ server.listen(5001, function() {
 
 
 //3- instalar dependencia nodemon que reinicia o servidor a cada alteração 
+//4-Instalar dependencia nunkuks que é um template engine. Um motor que trabalha com templates.
+//temos que chamar o nunjuks no inicio do server.js
 
+server.set("view engine", "html") //qual tipo de arquivo que ele vai ler
 
-//4-Instalar dependencia nunkuks que é um template engeene render
+nunjucks.configure("views", {
+    express:server
+})
+
