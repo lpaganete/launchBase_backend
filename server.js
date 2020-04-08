@@ -42,7 +42,7 @@ server.set("view engine", "njk") //qual tipo de arquivo que ele vai ler
 nunjucks.configure("views", {
     
     express: server,
-    autoescape: false //! 
+    autoescape: false //! configurando nunjucks para aceitar códigos html dentro de outros codigos html (ex: um link dentro de um paragrafo)
 
 })
 
