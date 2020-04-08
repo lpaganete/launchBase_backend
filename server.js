@@ -4,6 +4,8 @@ const nunjucks = require('nunjucks')
 
 const server = express()
 
+ 
+
 //1-setando a porta que o servidor vai rodar e exibindo mensagem caso o ele execute
 server.listen(5001, function() {
     console.log("Server is running!")
@@ -30,9 +32,16 @@ nunjucks.configure("views", {
 //abaixo dizemos para o express ler arquivos statics e que eles estão na pasta public
 server.use(express.static('public'))   
 
-//-6 Configurando rota da página classes(portifólio)
+//-6 Configurando rota da página classes(portifólio) 
+
 server.get("/portifolio", function(rec, res) { 
-    return res.render("portifolio") //chamando a antiga pagina index
+    return res.render("portifolio", {items: videos}) //-9 cria um objeto trazendo os videos para dentro da propiedade items que vai ser acessado no fron-end
 })
 
 //7-configurar engine para ler arquivos njk (linha 22)
+
+
+//8-trazendo os objetos do array para dentro da variavel videos.
+const videos = require('./data') // o  ./ acessa arquivos que estão na raiz do projeto
+
+//9-enviando os dados do back-end(data.js) para meu front-end(portifolio.njk) ***  Está junto da etapa 6 ***
