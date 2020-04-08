@@ -32,7 +32,8 @@ server.listen(5001, function() {
 })
  
 
-//3- instalar dependencia nodemon que reinicia o servidor a cada alteração: "npm install -D nodemon"
+//3- instalar dependencia nodemon que reinicia o servidor a cada alteração: "npm install -D nodemon" e alterar o aributo start para: "start": "nodemon server.js" no arquivo package.json 
+
 //4-Instalar dependencia nunkuks que é um template engine. Um motor que trabalha com templates.
 //temos que chamar o nunjuks no inicio do server.js
 
