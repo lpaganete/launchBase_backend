@@ -111,6 +111,7 @@ header {
 
 .card {
     background-color: var(--color-rocket );
+    display: grid; /*Adicionando gri para alinhar os componentes */
 }
 
 .card__image-container img  { /*Com a largura da imagem em 100%. Ela vai respeitar o tamanho maximo dos pais. (800px no caso )*/
@@ -125,6 +126,7 @@ header {
 .card_info {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
+    align-items: center; /*Alinha os items ao centro. Funciona somente com desplay*/
 }
 
 .card_price {
