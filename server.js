@@ -19,7 +19,7 @@ server.listen(5001, function() {
 //4-Instalar dependencia nunkuks que é um template engine. Um motor que trabalha com templates.
 //temos que chamar o nunjuks no inicio do server.js
 
-server.set("view engine", "html") //qual tipo de arquivo que ele vai ler
+server.set("view engine", "njk") //qual tipo de arquivo que ele vai ler
  
 nunjucks.configure("views", {
     express:server
@@ -33,3 +33,5 @@ server.use(express.static('public'))
 server.get("/portifolio", function(rec, res) { 
     return res.render("portifolio") //chamando a antiga pagina index
 })
+
+//7-configurar engine para ler arquivos njk (linha 22)
