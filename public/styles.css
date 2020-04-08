@@ -143,7 +143,7 @@ header {
      height: 100%;
      position: fixed; /*Fixa a posição do modal*/
      top: 0;  /*Fixa o modal no top com 0 de espaço (ocupando 100% da tela )*/
-     opacity: 0 ; /*!Lembrando que tenho que desabilitar a "opacity"  e o "visibility" quando quero testar se o modal está funcionando*/
+     opacity: 0 ; /*? Lembrando que tenho que desabilitar a "opacity"  e o "visibility" quando quero testar se o modal está funcionando */
      visibility: hidden; /*A visibilidade do modal tem que estar escondida */
 }
 
@@ -151,9 +151,9 @@ header {
      background-color: white;
      width: 90%;
      height: 90%;
-     margin: 5vh auto; /*5vh significa a altura em relação a tela do dispositivo */
-     position: relative; /*Serve para limitar o espaço onde o ícone pode ficar */
-    
+     margin: 5vh auto; /* 5vh significa a altura em relação a tela do dispositivo */
+     position: relative; /* Serve para limitar o espaço onde o ícone pode ficar */
+     padding-left: 8px; /** Arrumando posicionamento do iframe*/
 }
 
 .close-modal {
@@ -181,6 +181,7 @@ iframe {
     position: absolute;
     top: 5%;
     margin: 0 auto;
+    
 }
 
 
