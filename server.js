@@ -13,7 +13,7 @@ server.listen(5001, function() {
 
 
  //2-Configurando a rota da pagina index (about)
- server.get("/", function(rec, res) {  //o / chama a pagina inicial
+ server.get("/", function(req, res) {  //o / chama a pagina inicial
 
     //10- Criando objeto about para armazenar todos componentes da minha página about.njk no back-end
     const about = {
@@ -53,7 +53,7 @@ server.use(express.static('public'))
 
 //-6 Configurando rota da página classes(portifólio) 
 
-server.get("/portifolio", function(rec, res) { 
+server.get("/portifolio", function(req, res) { 
     return res.render("portifolio", {items: videos}) //-9 cria um objeto trazendo os videos para dentro da propiedade items que vai ser acessado no fron-end
 })
 
@@ -67,3 +67,13 @@ const videos = require('./data') // o  ./ acessa arquivos que estão na raiz do 
 
 
 //10- trazendo varias celementos do back-end para pagina about
+
+//11- A idéia é: remover o modal, e ao clicar em um card encaminhar o usuário para outra página
+
+server.get("/video", function(req, res) {  //Usando o rec
+   //passando id do video pela url
+
+   const id = req.query.id  //Inserindo o id dentro da variavel id
+
+   res.send(id) //respondendo com o valor da variavel id
+})
