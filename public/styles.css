@@ -178,7 +178,7 @@ header {
 iframe {
      
 
-    padding: 10px;
+    /*padding: 10px;*/
     width: 98%;
     height: 90%;
     position: absolute;
@@ -195,11 +195,31 @@ iframe {
 }
 
 .featured {
-    position: absolute; /*Para se manter dentro da imagem ele tem que ficar com position absolute. Msa depende do elemento pai ser relativo*/
+    position: absolute; /*Para se manter dentro da imagem ele tem que ficar com position absolute. Mas depende do elemento pai ser relativo*/
     right: 5px;
     background: #f7d05f;
     color: #111;
     padding: 2px 8px;
     border-radius: 16px;
     top: -6px;
+}
+
+
+/* === VIDEO PAGE ===*/
+.video {
+    margin: 0 auto;
+    max-width: 800px; 
+} 
+
+.card__video-container {
+    position: relative; 
+    padding-top: 62.6%;
+}
+
+.card__video-container iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    
 }

@@ -85,5 +85,5 @@ server.get("/video", function(req, res) {  //Usando o rec
         return res.end("Video not found!")
     }
 
-    return res.render("video", {video})
-})
+    return res.render("video", {item: video})
+}) 
