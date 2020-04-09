@@ -75,5 +75,15 @@ server.get("/video", function(req, res) {  //Usando o rec
 
    const id = req.query.id  //Inserindo o id dentro da variavel id
 
-   res.send(id) //respondendo com o valor da variavel id
+    const video = videos.find(function(video) { // vai rodar todos os elementos do array executando a function 1 por um
+        if(video.id == id){
+            return true;
+        }
+    })
+
+    if(!video) {
+        return res.end("Video not found!")
+    }
+
+    return res.render("video", {video})
 })
