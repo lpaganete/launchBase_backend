@@ -112,7 +112,7 @@ header {
 .card {
     background-color: var(--color-rocket );
     display: grid; /*Adicionando gri para alinhar os componentes */
-    cursor: pointer;
+    cursor: pointer; /*Quando passar o mouse em cima ele vira uma mãozinha*/
 }
 
 .card__image-container img  { /*Com a largura da imagem em 100%. Ela vai respeitar o tamanho maximo dos pais. (800px no caso )*/
@@ -188,3 +188,18 @@ iframe {
 }
 
 
+/* === FEATURED === */
+
+.featured-wrapper.card__image-container { /*Adicionando o position somente quando a classe tiver o featured*/
+    position: relative;
+}
+
+.featured {
+    position: absolute; /*Para se manter dentro da imagem ele tem que ficar com position absolute. Msa depende do elemento pai ser relativo*/
+    right: 5px;
+    background: #f7d05f;
+    color: #111;
+    padding: 2px 8px;
+    border-radius: 16px;
+    top: -6px;
+}
